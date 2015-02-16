@@ -13,6 +13,11 @@
 </head>
 <body>
 <style>
+body {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
 article {
   position:absolute;
   top:0;
@@ -30,7 +35,7 @@ article {
   }
 .sections {
   background:rgba(255,255,255,0.5);
-  width:240px;
+  width: 260px;
   }
 section {
   padding:20px;
@@ -41,6 +46,9 @@ section {
 section.active {
   background:#fff;
   color:#404040;
+  }
+section:last-child {
+  margin-bottom: 300px;
   }
 </style>
 <div id='map'></div>
@@ -141,7 +149,7 @@ function setId(newId) {
         if (layer.feature.properties.id === newId) {
             map.setView(layer.getLatLng(), layer.feature.properties.zoom || 14);
             layer.setIcon(L.mapbox.marker.icon({
-                'marker-color': '#a8f'
+                'marker-color': '#ce364f'
             }));
         } else {
             layer.setIcon(L.mapbox.marker.icon({
